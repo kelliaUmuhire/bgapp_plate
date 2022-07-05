@@ -6,7 +6,7 @@ WORKDIR /usr/app/client/
 COPY client/package*.json ./
 RUN yarn install 
 COPY client/ ./
-RUN npm build
+RUN npm run build
 
 #setup and build the server
 
