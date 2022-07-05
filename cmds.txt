@@ -1,0 +1,8 @@
+-docker build -t kellu001/full_bplate .
+-docker run -it -p 3050 server - first build it
+-docker run -it -p 8080 client - first build it
+-docker compose
+
+-docker-compose up -d --build
+-docker push full_bplate/latest
+-docker images

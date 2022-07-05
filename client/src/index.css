@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Arvo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+body {
+  font-family: "Inter", sans-serif !important;
+}
+
+.b-title {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.txt-sm {
+  font-size: 14px;
+}
+
+.txt-sm2 {
+  font-size: 15px;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+.logo-type {
+  font-family: "Arvo", serif;
+  font-weight: bold;
+}
