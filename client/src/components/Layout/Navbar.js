@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function Navbar() {
+  const [isNavCollapsed, setIsNavCollapsed] = useState(true);
+  const [dropdown, setDropDown] = useState(true);
+
+  const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
@@ -8,17 +12,21 @@ export default function Navbar() {
           Navbar
         </a>
         <button
-          className="navbar-toggler"
+          className="custom-toggler navbar-toggler"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
+          data-toggle="collapse"
+          data-target="#navbarsExample09"
+          aria-controls="navbarsExample09"
+          aria-expanded={!isNavCollapsed ? true : false}
           aria-label="Toggle navigation"
+          onClick={handleNavCollapse}
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarNavDropdown">
+        <div
+          className={`${isNavCollapsed ? "collapse" : ""} navbar-collapse`}
+          id="navbarNavDropdown"
+        >
           <ul className="navbar-nav">
             <li className="nav-item">
               <a className="nav-link active" aria-current="page" href="#non">
@@ -43,13 +51,11 @@ export default function Navbar() {
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
+                onClick={() => setDropDown(!dropdown)}
               >
                 Dropdown link
               </a>
-              <ul
-                className="dropdown-menu"
-                aria-labelledby="navbarDropdownMenuLink"
-              >
+              <ul className={`${dropdown ? "" : "dropdown-menu"}`}>
                 <li>
                   <a className="dropdown-item" href="#non">
                     Action
@@ -69,7 +75,7 @@ export default function Navbar() {
             </li>
           </ul>
         </div>
-        {/* <form className="d-flex">
+        <form className="d-flex">
           <input
             className="form-control me-2"
             type="search"
@@ -79,7 +85,7 @@ export default function Navbar() {
           <button className="btn btn-outline-success" type="submit">
             Search
           </button>
-        </form> */}
+        </form>
       </div>
     </nav>
   );

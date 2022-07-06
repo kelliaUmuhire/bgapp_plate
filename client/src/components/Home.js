@@ -5,9 +5,9 @@ import Table from "./Layout/Table";
 export default function Home() {
   return (
     <div className="container-fluid">
-      <Navbar />
+      {/* <Navbar /> */}
       <div>Hello</div>
-      <Table />
+      {/* <Table /> */}
     </div>
   );
 }
