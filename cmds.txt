@@ -6,3 +6,16 @@
 -docker-compose up -d --build
 -docker push full_bplate/latest
 -docker images
+-docker ps
+-docker volume ls
+-docker login
+
+$ docker-compose down
+$ docker-compose up -d 
+
+
+key: b04aa2a6-cbda-4f47-b402-897a1b95f274
+
+docker
+username: kellu001
+password: paspassdock!!
